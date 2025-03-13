@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class RunnerTest {
 
-    private static final List<Input> inputs = List.of(
+    private static final List<Input> INPUTS = List.of(
         new Input("abc"),
         new Input("1"),
         new Input("3"),
@@ -19,7 +19,7 @@ class RunnerTest {
 
     @Test
     void run() {
-        List<Output> outputs = sut.run(inputs);
+        List<Output> outputs = sut.run(INPUTS);
         assertThat(outputs).containsExactly(
             new Output(1),
             new Output(3)
